@@ -18,6 +18,9 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
     <PackageReference Include="NServiceBus.Azure.Transports.WindowsAzureServiceBus" Version="9.1.0-*" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'net461'">
+    <PackageReference Include="NServiceBus.Transport.AzureServiceBus" Version="1.5.0" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AcceptanceTesting\AcceptanceTesting.csproj" />
     <ProjectReference Include="..\NServiceBus.Router.Connector\NServiceBus.Router.Connector.csproj" />
